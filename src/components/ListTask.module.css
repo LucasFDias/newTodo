@@ -1,0 +1,147 @@
+
+.list {
+    display: grid;
+    gap: 1rem;
+}
+
+.list div {
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+}
+
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 0.75rem 0;
+    font-size: 87.5%;
+    font-weight: 600;
+}
+
+.stats span {
+    color: var(--gray-200);
+    padding: 0.125rem 0.5rem;
+    margin-left: 0.25rem;
+    border-radius: 8px;
+    background-color: var(--gray-400);
+}
+
+.stats p:first-child{
+    color: var(--blue);
+}
+
+.stats p:last-child {
+    color: var(--purple)
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    background-color: var(--gray-500);
+}
+
+
+.taskComplete,
+.taskIncomplete {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    color: var(--gray-100);
+    transition: text-decoration 0.5s ease-out, color 0.5s ease-out;
+}
+
+.taskComplete {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+
+.btnComplete,
+.btnIncomplete {
+    background: none;
+    border: 2px solid var(--blue);
+    border-radius: 50%; 
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    justify-content: center;
+    transition: opacity 0.15s, background-color 0.15s, border 0.15s; 
+   
+
+    &:focus-visible,
+    &:hover{
+        opacity: 0.7;
+        background-color: rgba(var(--blue, 0.1));
+    }
+}
+
+
+.btnIncomplete svg{
+    opacity: 0;
+}
+.btnComplete svg {
+    font-size: 1.2rem;
+    top: 8px; 
+    width: 1rem;
+    opacity: 1;
+}
+
+.btnComplete{
+    color: var(--gray-100);
+   
+    border: 2px solid var(--purple-dark);
+    background-color: var(--purple-dark);
+
+
+    &:focus-visible,
+    &:hover{
+        opacity: 1;
+        background-color: var(--purple);
+        border: 1px solid var(--purple);
+    }
+}
+
+.btnDelete {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0 0;
+    font-size: 120%;
+    color: var(--gray-300);
+    border: none;
+    background: none;
+    transition: background-color 0.15s, border-radius 0.15s;
+    
+    &:focus-visible,
+    &:hover{
+        color: var(--danger);
+        border-radius: 8px;
+        background-color: var(--gray-400);    
+        cursor: pointer;
+    }
+}
+
+
+.emptyList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--gray-300);
+    
+}
+ 
+.emptyList svg {
+    font-size: 3.5rem;
+    opacity: 0.5;
+}
+
+.emptyList p{
+    font-size: 1rem;
+}
